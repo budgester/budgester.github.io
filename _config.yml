@@ -1,3 +1,19 @@
+# GitHub Pages (classic Jekyll build from master /). Custom domain: budgester.com
+# (set in the repo's Pages settings once DNS points here).
+title: Martin Stevens
+description: Security and DevSecOps engineer in London. Secrets, workload identity and secure delivery pipelines.
+url: https://budgester.com
+author: Martin Stevens
 theme: jekyll-theme-cayman
-title: budgester.github.io
-description: Devops'ing all the things
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+permalink: /:year/:month/:title.html
+defaults:
+  - scope: { type: posts }
+    values: { layout: post }
+exclude:
+  - README.md
+  - index.old
+  - docs/brownfield-devops.md   # unpublished draft
