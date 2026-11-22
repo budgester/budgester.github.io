@@ -20,6 +20,57 @@ pull request / push to main
   → tofu init / plan / apply
 ```
 
+## How the job asks GitHub for a token
+
+Nothing in the repository holds a credential. The token is minted fresh for each job, and the job has to be allowed to ask for it.
+
+**1. Give the workflow permission.** By default a job can't request an OIDC token. One line in the workflow allows it:
+
+```yaml
+permissions:
+  contents: read
+  id-token: write       # allow this job to request an OIDC token
+  pull-requests: write  # to post the plan as a comment
+```
+
+**2. The runner provides a request URL.** With that permission, GitHub puts two environment variables into the job: `ACTIONS_ID_TOKEN_REQUEST_URL` and `ACTIONS_ID_TOKEN_REQUEST_TOKEN`. The second is a short-lived bearer token that's only good for asking for the first. `aws-actions/configure-aws-credentials` uses them for you, but this is what it does underneath:
+
+```sh
+curl -s -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+  "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | jq -r .value
+```
+
+The `audience` parameter becomes the token's `aud` claim. AWS expects `sts.amazonaws.com`, and the trust policy checks for it.
+
+**3. GitHub returns a signed JWT.** Its claims describe exactly where the job is running. Decoded, the interesting parts look like this for a pull request:
+
+```json
+{
+  "iss": "https://token.actions.githubusercontent.com",
+  "aud": "sts.amazonaws.com",
+  "sub": "repo:OWNER@12345/REPO@67890:pull_request",
+  "repository": "OWNER/REPO",
+  "event_name": "pull_request",
+  "ref": "refs/pull/4/merge",
+  "exp": 1795300000
+}
+```
+
+On a push to `main`, `sub` ends in `:ref:refs/heads/main` and `event_name` is `push`. The token expires within minutes.
+
+**4. Swap it for AWS credentials.** The action calls STS with the token and the role it wants. The equivalent CLI call is:
+
+```sh
+aws sts assume-role-with-web-identity \
+  --role-arn arn:aws:iam::ACCOUNT:role/gh-aws-plan \
+  --role-session-name gh-run \
+  --web-identity-token "$TOKEN"
+```
+
+AWS checks the signature against GitHub's published keys (that's what the OIDC provider registered in IAM is for), then checks the role's trust policy against `aud` and `sub`. If they match, it returns temporary credentials, which the action exports as environment variables for the rest of the job.
+
+To see the claims your own jobs get, decode the token in a throwaway step. Don't print the token itself in a public log: it's a credential until it expires.
+
 ## Two roles, chosen by event
 
 - **Plan role:** read-only access to the account, plus read access to the state and its lock file. It can only be used from **pull requests**.
