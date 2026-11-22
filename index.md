@@ -23,7 +23,7 @@ Sysadmin, then developer, then DevOps, and now security engineering. Most recent
 
 ## Outside work
 
-- **Sailing:** we've sailed the River Crouch in Essex for about 17 years, through three boats: a Westerly Griffon, a Gib'Sea 33 and now *Ragamuffin*, a 2001 Gemini 105MC catamaran kept at Burnham-on-Crouch. We're members of the Royal Burnham Yacht Club. The boat has a Victron energy system reporting over 4G, so of course I monitor it remotely.
+- **Sailing:** we've sailed the River Crouch in Essex for about 17 years, through three boats: a Westerly Griffon, a Gib'Sea 33 and now *Ragamuffin*, a 2001 Gemini 105MC catamaran kept at Burnham-on-Crouch. We're members of the Royal Burnham Yacht Club. The boat has a Victron energy system reporting over 4G, so of course I monitor it remotely. Follow along at [A Shipful of Kittens](https://www.facebook.com/ShipFullOfKittens).
 - **Hi-fi and home cinema:** a B&W 5.0 speaker set (706 S3 fronts, HTM72 S3 centre, 686 S2 rears) driven by an Arcam AVR5. For vinyl, a J.A. Michell / Transcriptors Hydraulic Reference turntable with a Micro Seiki MA-707 arm, through a Pro-Ject Phono Box S2.
 
 ## Posts
