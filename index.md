@@ -36,6 +36,8 @@ I've been contributing to open source since 2001. Usually I hit a problem in rea
 ## Outside work
 
 - **Sailing:** we've sailed the River Crouch in Essex for about 17 years, through three boats: a Westerly Griffon, a Gib'Sea 33 and now *Ragamuffin*, a 2001 Gemini 105MC catamaran kept at Burnham-on-Crouch. We're members of the Royal Burnham Yacht Club. The boat has a Victron energy system reporting over 4G, so of course I monitor it remotely. Follow along at [A Shipful of Kittens](https://www.facebook.com/ShipFullOfKittens).
+- **Atlantic crossing:** in January 2018 I crewed *Challenger 2* from Antigua back to the UK with the Tall Ships Youth Trust, on the Amazons watch. She's one of the 72 ft steel yachts built for the BT Global Challenge "wrong way" round-the-world race. It was a winter crossing via Horta in the Azores, with a gale to welcome us home. The [crew blog](https://www.firstclasssailing.com/blog/antigua-to-portsmouth-the-return-leg-begins/) tells it day by day.
+- **Kayaking:** a member of Edmonton Canoe Group, mostly sea kayaking. I hold the BCU 3 Star Sea award, organised a club sea kayak trip from Buckler's Hard in the New Forest in 2012, and paddled the tidal Thames out to the Thames Barrier with Tower Hamlets Canoe Club in 2014.
 - **Hi-fi and home cinema:** a B&W 5.0 speaker set (706 S3 fronts, HTM72 S3 centre, 686 S2 rears) driven by an Arcam AVR5. For vinyl, a J.A. Michell / Transcriptors Hydraulic Reference turntable with a Micro Seiki MA-707 arm, through a Pro-Ject Phono Box S2.
 
 ## Posts
