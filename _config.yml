@@ -5,6 +5,7 @@ description: Security and DevSecOps engineer in London. Secrets, workload identi
 url: https://budgester.com
 author: Martin Stevens
 theme: jekyll-theme-cayman
+google_analytics: G-FT1KY4VXQL   # GA4 property budgester.com; tag in _includes/head-custom-google-analytics.html
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

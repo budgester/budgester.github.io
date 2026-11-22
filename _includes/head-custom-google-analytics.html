@@ -1,0 +1,14 @@
+{% comment %}
+Overrides the Cayman theme's include, which still loads the retired
+Universal Analytics (analytics.js). This is the GA4 tag. It only renders
+when google_analytics (a G- measurement ID) is set in _config.yml.
+{% endcomment %}
+{% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+{% endif %}
