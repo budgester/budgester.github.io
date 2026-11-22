@@ -21,12 +21,10 @@ I also run my own limited company, Budgester Technologies Ltd, which has given m
 
 Sysadmin, then developer, then DevOps, and now security engineering. Most recently I've been the DevSecOps lead on a large infrastructure modernisation programme in financial services.
 
-## Writing
+## Posts
 
-{% for post in site.posts limit:5 %}- [{{ post.title }}]({{ post.url | relative_url }}) <small>({{ post.date | date: "%b %Y" }})</small>
+{% for post in site.posts %}- {{ post.date | date: "%-d %b %Y" }}: [{{ post.title }}]({{ post.url | relative_url }})
 {% endfor %}
-[All posts]({{ '/blog/' | relative_url }})
-
 ## Contact
 
 - Email: [budgester@budgester.com](mailto:budgester@budgester.com)
