@@ -27,6 +27,10 @@ Sysadmin, then developer, then DevOps, and now security engineering. Most recent
 {% endfor %}
 [All posts]({{ '/blog/' | relative_url }})
 
+## About this site
+
+This site is a work in progress and is constantly evolving. The content is based mainly on things I work on, and also on technical discussions I have with AI, which I use as a sounding board to explore ideas, check my thinking and try things out before writing them up. Expect pages to be added, rewritten and occasionally replaced as I learn more.
+
 ## Contact
 
 - Email: [budgester@budgester.com](mailto:budgester@budgester.com)
