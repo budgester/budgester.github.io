@@ -25,7 +25,7 @@ Sysadmin, then developer, then DevOps, and now security engineering. Most recent
 
 I've been contributing to open source since 2001. Usually I hit a problem in real work, report it, and send the fix or the missing docs.
 
-- **[IRM (Information Resource Manager)](https://sourceforge.net/projects/irm/):** a developer on this GPL PHP/MySQL asset tracking and helpdesk ticketing system for IT departments, on SourceForge from 2001.
+- **[IRM (Information Resource Manager)](https://sourceforge.net/projects/irm/):** a developer on this GPL PHP/MySQL asset tracking and helpdesk ticketing system for IT departments, on SourceForge from 2001. I later took it over as [maintainer on Launchpad](https://launchpad.net/irm), where in 2008 I refactored the procedural code into classes and reworked the email ticket tracking.
 - **[Checkov](https://github.com/bridgecrewio/checkov/pull/4934):** corrected the Bitbucket integration docs to match the code.
 - **[The Littlest JupyterHub](https://github.com/jupyterhub/the-littlest-jupyterhub/pull/472):** wrote the AWS Cognito authentication docs.
 - **[sonar-cloudformation-plugin](https://github.com/Hack23/sonar-cloudformation-plugin/pull/639):** a Docker install example and clearer setup docs for importing Checkov and cfn-nag results into SonarQube.
