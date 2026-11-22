@@ -21,6 +21,18 @@ I also run my own limited company, Budgester Technologies Ltd, which has given m
 
 Sysadmin, then developer, then DevOps, and now security engineering. Most recently I've been the DevSecOps lead on a large infrastructure modernisation programme in financial services.
 
+## Open source
+
+I've been contributing to open source since 2001. Usually I hit a problem in real work, report it, and send the fix or the missing docs.
+
+- **[IRM (Information Resource Manager)](https://sourceforge.net/projects/irm/):** a developer on this GPL PHP/MySQL asset tracking and helpdesk ticketing system for IT departments, on SourceForge from 2001. I later took it over as [maintainer on Launchpad](https://launchpad.net/irm), where in 2008 I refactored the procedural code into classes and reworked the email ticket tracking.
+- **[Checkov](https://github.com/bridgecrewio/checkov/pull/4934):** corrected the Bitbucket integration docs to match the code.
+- **[The Littlest JupyterHub](https://github.com/jupyterhub/the-littlest-jupyterhub/pull/472):** wrote the AWS Cognito authentication docs.
+- **[sonar-cloudformation-plugin](https://github.com/Hack23/sonar-cloudformation-plugin/pull/639):** a Docker install example and clearer setup docs for importing Checkov and cfn-nag results into SonarQube.
+- **[Eclipse Che JetBrains dev server](https://github.com/che-incubator/jetbrains-ide-dev-server/pull/66):** error reporting for failed IDE downloads.
+- **Bug reports** to [HashiCorp Vault Secrets Operator](https://github.com/hashicorp/vault-secrets-operator/issues/1092), [Sigstore cosign](https://github.com/sigstore/cosign/issues/2611), [StackRox](https://github.com/stackrox/stackrox/issues/17783), Eclipse Che, Ansible and Bandit, among others.
+- Earlier: fixes to Chef's knife-rackspace for Windows (WinRM) bootstrapping.
+
 ## Outside work
 
 - **Sailing:** we've sailed the River Crouch in Essex for about 17 years, through three boats: a Westerly Griffon, a Gib'Sea 33 and now *Ragamuffin*, a 2001 Gemini 105MC catamaran kept at Burnham-on-Crouch. We're members of the Royal Burnham Yacht Club. The boat has a Victron energy system reporting over 4G, so of course I monitor it remotely. Follow along at [A Shipful of Kittens](https://www.facebook.com/ShipFullOfKittens).
