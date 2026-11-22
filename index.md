@@ -29,3 +29,4 @@ Sysadmin, then developer, then DevOps, and now security engineering. Most recent
 
 - Email: [budgester@budgester.com](mailto:budgester@budgester.com)
 - GitHub: [github.com/budgester](https://github.com/budgester)
+- LinkedIn: [linkedin.com/in/budgester](https://www.linkedin.com/in/budgester/)
