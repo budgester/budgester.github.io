@@ -1,8 +1,9 @@
 ---
+date: 2026-11-22 11:00:00 +0000
 title: "The wildcard DNS record that gave away every subdomain"
 ---
 
-While importing my DNS into OpenTofu, I found two odd records on a family member's domain that I look after:
+While [importing my DNS into OpenTofu](/2026/11/bringing-an-aws-account-under-opentofu.html), I found two odd records on a family member's domain that I look after:
 
 ```
 *.example.net   A   <an old cloud server IP>

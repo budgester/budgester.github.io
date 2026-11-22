@@ -1,4 +1,5 @@
 ---
+date: 2026-11-22 12:00:00 +0000
 title: "Managing a handful of personal domains properly"
 ---
 
@@ -12,7 +13,7 @@ The lapsed domain is worth dwelling on. Whoever owns it now could receive any ma
 
 ## 2. Put DNS in code
 
-All my zones are now in OpenTofu, and every change goes through a pull request with the plan posted for review (see the earlier posts). The main benefit for personal domains isn't automation: it's that every record is written down, and every change has a reason attached.
+All my zones are now in OpenTofu, and every change goes through a pull request with the plan posted for review (see [bringing AWS under OpenTofu](/2026/11/bringing-an-aws-account-under-opentofu.html) and [the pipeline](/2026/11/plan-on-pull-request-apply-on-merge-with-github-oidc.html)). The main benefit for personal domains isn't automation: it's that every record is written down, and every change has a reason attached.
 
 ## 3. Lock down domains that never send mail
 
@@ -49,7 +50,7 @@ My main domain's website had been a Blogger blog on `www` since about 2018, HTTP
 
 ## 6. Check for things pointing at nothing
 
-Any record pointing at a server, bucket or service you no longer control is a liability. I found a wildcard record sending every subdomain of one domain to a stranger's server (written up separately). Look for records pointing at raw IPs and CNAMEs to services you've cancelled.
+Any record pointing at a server, bucket or service you no longer control is a liability. I found a wildcard record sending every subdomain of one domain to a stranger's server ([written up separately](/2026/11/the-wildcard-record-that-gave-away-every-subdomain.html)). Look for records pointing at raw IPs and CNAMEs to services you've cancelled.
 
 ## 7. Write it down
 

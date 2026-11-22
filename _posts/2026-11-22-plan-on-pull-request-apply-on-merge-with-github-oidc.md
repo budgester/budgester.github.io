@@ -1,8 +1,9 @@
 ---
+date: 2026-11-22 10:00:00 +0000
 title: "Plan on pull request, apply on merge, and GitHub's immutable OIDC subject"
 ---
 
-Once my AWS account was described in OpenTofu, I wanted a rule: every change goes through a pull request, the plan is posted on the PR for me to read, and only merging to `main` applies it. No AWS keys stored in GitHub, and no way for a branch to apply anything.
+Once my AWS account was [described in OpenTofu](/2026/11/bringing-an-aws-account-under-opentofu.html), I wanted a rule: every change goes through a pull request, the plan is posted on the PR for me to read, and only merging to `main` applies it. No AWS keys stored in GitHub, and no way for a branch to apply anything.
 
 This post covers how that's set up, and the one thing that broke it on the first run: GitHub's newer, immutable OIDC subject claim.
 

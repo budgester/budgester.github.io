@@ -1,4 +1,5 @@
 ---
+date: 2026-11-22 09:00:00 +0000
 title: "Bringing an existing AWS account under OpenTofu"
 ---
 
@@ -57,7 +58,7 @@ The first plans weren't clean, and each difference taught me something.
 
 **Tabs inside MX records.** Two domains had MX values with a tab between the priority and the host (`1<TAB>ASPMX.L.GOOGLE.COM.`), presumably from a copy and paste years ago. Generating the code from the live data kept the tab (`"1\tASPMX..."` in HCL), so the plan matched. Retyping them would have shown a change.
 
-**Escaped names.** Route 53 returns some characters as octal escapes: a wildcard comes back as `\052.example.com`, and an `@` as `\100`. The script had to unescape those, both in the record names and in the import IDs. One of them turned out to be a literal record called `@.example.com`, probably someone's attempt at the zone apex. More on that in another post.
+**Escaped names.** Route 53 returns some characters as octal escapes: a wildcard comes back as `\052.example.com`, and an `@` as `\100`. The script had to unescape those, both in the record names and in the import IDs. One of them turned out to be a literal record called `@.example.com`, probably someone's attempt at the zone apex. More on that in [another post](/2026/11/the-wildcard-record-that-gave-away-every-subdomain.html).
 
 **Default tags.** I'd added `default_tags` to the provider, which made every zone show a tag change. I took them out for the import, so the first apply really changes nothing. Tags can come later as a deliberate change.
 
@@ -75,4 +76,4 @@ Once DNS was in, the same approach worked for IAM users, groups and policies, an
 - Keep credentials out of the state.
 - Go one area at a time: DNS first, then IAM and SES, then clean up.
 
-The next step was making sure nobody, including me, changes anything without a reviewed plan. That's the [pipeline post](#).
+The next step was making sure nobody, including me, changes anything without a reviewed plan. That's the [pipeline post](/2026/11/plan-on-pull-request-apply-on-merge-with-github-oidc.html).
