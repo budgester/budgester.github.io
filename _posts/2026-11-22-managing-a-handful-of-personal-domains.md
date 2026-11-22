@@ -1,5 +1,5 @@
 ---
-date: 2026-11-22 12:00:00 +0000
+date: 2026-11-22 00:04:00 +0000
 title: "Managing a handful of personal domains properly"
 ---
 
