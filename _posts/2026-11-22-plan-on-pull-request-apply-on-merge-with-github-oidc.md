@@ -1,5 +1,5 @@
 ---
-date: 2026-11-22 10:00:00 +0000
+date: 2026-11-22 00:02:00 +0000
 title: "Plan on pull request, apply on merge, and GitHub's immutable OIDC subject"
 ---
 

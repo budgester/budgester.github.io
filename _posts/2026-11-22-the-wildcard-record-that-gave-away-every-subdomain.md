@@ -1,5 +1,5 @@
 ---
-date: 2026-11-22 11:00:00 +0000
+date: 2026-11-22 00:03:00 +0000
 title: "The wildcard DNS record that gave away every subdomain"
 ---
 
