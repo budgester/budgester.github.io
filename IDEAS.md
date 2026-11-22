@@ -8,12 +8,10 @@ Not published (excluded in `_config.yml`). Add ideas here; when one becomes a po
 
 ## From work on the home setup (Nov 2026)
 
-- **Bringing an existing AWS account under OpenTofu:** importing Route 53, IAM and SES with `import` blocks so the first plan shows no changes; generating the code from live data; the gotchas (empty zone comments becoming "Managed by Terraform", tab characters in MX values, octal-escaped names like `\052`).
-- **Plan on pull request, apply on merge, with no stored AWS keys:** GitHub Actions OIDC roles, one usable only from pull requests and one only from `main`; GitHub's immutable OIDC subject (`repo:owner@id/repo@id:...`) breaking the usual trust policy.
-- **Dangling DNS:** a forgotten wildcard record pointing at an old DigitalOcean IP that now serves a stranger's site on every subdomain; how to find and fix it, and why CAA records matter.
-- **Email authentication for a handful of personal domains:** SPF, DKIM and DMARC for Google Workspace domains, and locking down domains that never send mail (`-all`, `p=reject`).
-- **Deleting imported IAM policies:** the provider doesn't detach before deleting, and imported resources have no recorded dependencies, so detach and delete in separate changes.
-- **Replacing long-lived access keys** with `aws login` and MFA, and finding what still uses an old key.
+Published on 22 Nov 2026: AWS under OpenTofu, the OIDC plan/apply pipeline, the hijacked wildcard record, and managing personal domains. Still to write:
+
+- **Replacing long-lived access keys** with `aws login` and MFA, and finding what still uses an old key (CloudTrail last-used data, SES sending stats, checking the machines).
+- **Moving a personal site from Blogger to GitHub Pages** while keeping old post URLs, with a verified domain and CAA.
 
 ## Older drafts
 
